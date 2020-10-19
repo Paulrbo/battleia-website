@@ -1,0 +1,30 @@
+/* Style relative to index.html */
+section {
+    min-height: 100vh;
+    width: 100%;
+    max-width: 100%;
+}
+
+/* SECTIONS */
+
+section#home_section {
+    background: url("../img/pexels-luis-j-2085832.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 10vh 10vw;
+    width: 100%;
+    box-sizing: border-box;
+}
+section#home_section > div.slogan {
+    color: white;
+    max-width: 100%;
+    margin: 33vh auto 0 auto;
+}
+section#home_section > div.slogan > h1 {
+    font-size: 3em;
+    margin: 0;
+}
+section#home_section > div.slogan > p {
+    font-weight: 100;
+    margin: 0;
+}
