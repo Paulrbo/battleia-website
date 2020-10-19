@@ -1,4 +1,20 @@
 /* Global style */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #ffffff00;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: #d1d8e0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #5c2a9d;
+}
 
 html,
 body {
@@ -42,4 +58,12 @@ ul.navigation {
 li.brand-nav {
   font-weight: 700;
   text-transform: uppercase;
+}
+
+#nav{
+    margin: 4%;
+}
+
+h4{
+    padding-left: 1.5%;
 }

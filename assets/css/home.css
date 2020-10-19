@@ -3,12 +3,13 @@ section {
     min-height: 100vh;
     width: 100%;
     max-width: 100%;
+    box-sizing: border-box;
 }
 
 /* SECTIONS */
 
 section#home_section {
-    background: url("../img/pexels-luis-j-2085832.jpg");
+    background: url("../img/pexels-kaboompics-com-6069.jpg");
     background-size: cover;
     background-position: center;
     padding: 10vh 10vw;
@@ -27,4 +28,29 @@ section#home_section > div.slogan > h1 {
 section#home_section > div.slogan > p {
     font-weight: 100;
     margin: 0;
+}
+
+section#how_section {
+    padding: 10vh 10vw;
+}
+
+section#how_section > p {
+    margin: 0 0 25px 0;
+    font-weight: 300;
+}
+
+section#how_section > h2 {
+    text-align: center;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
+section#how_section > h3 {
+    margin: 0 0 3px 0;
+    text-transform: uppercase;
+}
+
+section#how_section > h4 {
+    margin: 0;
+    text-transform: uppercase;
 }

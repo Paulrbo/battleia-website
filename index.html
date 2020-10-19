@@ -23,98 +23,81 @@
         <li class="brand-nav">BattleIA</li>
       </ul>
       <ul class="navigation">
-        <li>Home</li>
-        <li>How it works</li>
-        <li>Download</li>
-        <li>About</li>
+        <li id="nav">Home</li>
+        <li id="nav">How it works</li>
+        <li id="nav">Download</li>
+        <li id="nav">About</li>
       </ul>
     </nav>
     <section id="home_section">
       <div class="slogan">
         <h1>BattleIA</h1>
-        <p>Build your IA and fight your way to the top against dozens of ennemies</p>
+        <p>
+          Build your IA and fight your way to the top against dozens of ennemies
+        </p>
       </div>
     </section>
     <section id="how_section">
-        <h2>How it works</h2>
-        <p>
-            <h3>Ground</h3>
-            The ground is made up of rectangular huts, it is entirely bordered by
-            walls. The surface of the ground is not known by the BOT! A BOT occupies
-            one square. One unit of energy occupies one square.
-        </p>
-        <p>
-            <h3>Simulation</h3>
-            A game round consists of a communication sequence between the simulator and a bot.
-            Simulator: executes the energy consumption for a BOT
-            BOT: determines the terrain scan level from 0 to 255
-            Simulator: scanning takes place
-            BOT : Determines an action (none, move, shoot, shield, hide, ...)
-            Simulator: executes the action and applies the changes if any
-            The simulator moves on to the next BOT.
-            Each BOT is notified immediately as soon as one of its characteristics is changed.
-        </p>
-        <p>
-            <h3>Bot caracteristics</h3>
-            A BOT has only one life. He loses his
-            life if his energy level drops to zero. It is simply disconnected from
-            the server.
-            Each BOT starts with 100 units of energy.
-            A BOT has lost if its energy reserve falls to zero.
-            There is no limit to energy storage
-            There is a loss of at least 1 unit of energy for each turn, even without any detection or action taken.
-            Energy is consumed by the detection
-            Energy is consumed by actions, shocks, blows received...
-            Energy can be recovered in the field
-            At the beginning of each round, the energy injected into the surrounding sensor must be indicated.
-            0 : no information will be captured
-            1 to 255: information from a distance of x boxes will be captured. This also corresponds to the energy consumed by this scan!
-        </p>
-    <p>
-            <h3>Item caracteristics</h3>
-            <h4>Energy capsules</h4>
-        <p>
-            On the playground, it is possible to find energy capsules.
-            Simply pass over an energy capsule to retrieve its contents.
-            Energy capsules will appear randomly on the field.
-        </p>
-        <h4>Protection</h4>
-        <p>
-            It is possible to activate a protective shield. It will be assigned a certain power level, which will be deducted in energy units for activation.
-            At each turn it will consume 1 unit of energy to maintain its power level.
-            If you take 1 hit, it loses 1 unit of power.
-            If its power drops to zero, it is then inactive.
-            It is possible to re-inject units of energy to increase the power level.
-            When the shield is deactivated, the current power level of the shield is recovered in units of energy.
-        </p>
-
-        <p>
-            <h4>Cloaks</h4>
-            It's possible to make yourself invisible by activating an occulting field. It will be assigned a certain level of power which will be deducted in units of energy for activation. This power level is the distance at which the occulting field is active.
-            Example: With a level 3, an enemy at a distance <= 3 will not detect us, an enemy further than 3 will be able to detect us.
-            At each turn it will consume 1 unit of energy to maintain its power level.
-            If you take 1 hit, it is automatically deactivated (and its energy is lost).
-            When the occulting field is deactivated, the power level of the occulting field is recovered in units of energy.
-        </p>
-    </p>
-        <p>
-            <h3>Move rules</h3>
-            It is possible to move one box in the 4 directions : north, south, east and west.
-            The box must be empty or contain an energy capsule.
-            If the box contains an energy capsule: the energy contained in this capsule is then absorbed.
-            If the box is occupied by a block: loss of 1 in energy
-            If the box is occupied by another Bot, each Bot loses one in energy.
-        </p>
-        <p>
-
-        </p>
+      <h2>How it works</h2>
+      <h3>Ground</h3>
+      <p>
+        The ground is made up of rectangular huts, it is entirely bordered by
+        walls. The surface of the ground is not known by the BOT! A BOT occupies
+        one square. One unit of energy occupies one square.
+      </p>
+      <h3>Simulation</h3>
+      <p>
+        A game round consists of a communication sequence between the simulator
+        and a bot. Simulator: executes the energy consumption for a BOT BOT:
+        determines the terrain scan level from 0 to 255 Simulator: scanning
+        takes place BOT : Determines an action (none, move, shoot, shield, hide,
+        ...)
+      </p>
+      <h3>Bot caracteristics</h3>
+      <p>
+        A BOT has only one life. He loses his life if his energy level drops to
+        zero. It is simply disconnected from the server. Each BOT starts with
+        100 units of energy. A BOT has lost if its energy reserve falls to zero.
+        There is no limit to energy storage There is a loss of at least 1 unit
+        of energy for each turn, even without any detection or action taken.
+       </p>
+      <h3>Item caracteristics</h3>
+      <h4>Energy capsules</h4>
+      <p>
+        On the playground, it is possible to find energy capsules. Simply pass
+        over an energy capsule to retrieve its contents. Energy capsules will
+        appear randomly on the field.
+      </p>
+      <h4>Protection</h4>
+      <p>
+        It is possible to activate a protective shield. It will be assigned a
+        certain power level, which will be deducted in energy units for
+        activation. At each turn it will consume 1 unit of energy to maintain
+        its power level. If you take 1 hit, it loses 1 unit of power. If its
+        power drops to zero, it is then inactive.
+      </p>
+      <h4>Cloaks</h4>
+      <p>
+        It's possible to make yourself invisible by activating an occulting
+        field. It will be assigned a certain level of power which will be
+        deducted in units of energy for activation. This power level is the
+        distance at which the occulting field is active.
+      </p>
+      <h3>Move rules</h3>
+      <p>
+        It is possible to move one box in the 4 directions : north, south, east
+        and west. The box must be empty or contain an energy capsule. If the box
+        contains an energy capsule: the energy contained in this capsule is then
+        absorbed. If the box is occupied by a block: loss of 1 in energy If the
+        box is occupied by another Bot, each Bot loses one in energy.
+      </p>
     </section>
     <section id="download_section">
       <h2>Download</h2>
       <p>
         To download the game click
         <a href="https://github.com/blenderlab/BattleIA">here</a>.
-        <img href="assets\img\HowDL.JPG" />
+        <img src="assets\img\HowDL.JPG" alt="Picture to show how to download" />
       </p>
     </section>
 
